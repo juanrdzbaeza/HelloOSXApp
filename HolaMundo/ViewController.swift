@@ -10,10 +10,16 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var nombre: NSTextField!
+    @IBOutlet weak var holaTu: NSTextField!
+    var name: String?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        holaTu.stringValue = "Hola Usuario";
+        
     }
 
     override var representedObject: AnyObject? {
@@ -21,7 +27,16 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
+    
+    @IBAction func saludar(sender: NSButton) {
+        name = nombre.stringValue;
+        holaTu.stringValue = "Hola "+name!;
+    }
+    @IBAction func reset(sender: NSButton) {
+        holaTu.stringValue = "Hola Usuario";
+        nombre.stringValue = "";
+    }
+    
 
 }
 
