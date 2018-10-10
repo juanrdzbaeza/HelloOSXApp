@@ -12,13 +12,12 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var nombre: NSTextField!
     @IBOutlet weak var holaTu: NSTextField!
-    var name: String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        holaTu.stringValue = "Hola Usuario";
+        holaTu.stringValue = "Hola Mundo";
         
     }
 
@@ -29,12 +28,21 @@ class ViewController: NSViewController {
     }
     
     @IBAction func saludar(sender: NSButton) {
-        name = nombre.stringValue;
-        holaTu.stringValue = "Hola "+name!;
+        if (nombre.stringValue == "") {
+            holaTu.stringValue = "¡Hola vergonzoso picaruelo!";
+        }else{
+            holaTu.stringValue = "Hola "+nombre.stringValue;
+        }
     }
-    @IBAction func reset(sender: NSButton) {
-        holaTu.stringValue = "Hola Usuario";
+    
+    @IBAction func retirarSaludo(sender: AnyObject) {
+        if holaTu.stringValue.containsString("vergonzoso")  {
+            holaTu.stringValue = "Adio zaborio";
+        }else{
+            holaTu.stringValue = "Hasta luego salao";
+        }
         nombre.stringValue = "";
+
     }
     
 
