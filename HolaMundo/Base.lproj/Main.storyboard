@@ -731,8 +731,12 @@
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="gdG-R8-LOC"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-0X-XMj">
-                                <rect key="frame" x="176" y="0.0" width="128" height="17"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-0X-XMj">
+                                <rect key="frame" x="18" y="0.0" width="444" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fK8-AD-R0C"/>
+                                    <constraint firstAttribute="width" constant="440" id="wDu-Ac-ovj"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="0uP-5h-7Md">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -741,15 +745,19 @@
                             </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7vd-0X-XMj" secondAttribute="trailing" constant="20" id="0Ls-VU-RMT"/>
                             <constraint firstItem="pxx-M1-M1V" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="58o-BO-SgZ"/>
                             <constraint firstItem="azR-8H-ypq" firstAttribute="leading" secondItem="MS2-so-3oJ" secondAttribute="trailing" constant="73" id="8CV-wZ-pqI"/>
                             <constraint firstItem="0zd-hK-8S8" firstAttribute="top" secondItem="pxx-M1-M1V" secondAttribute="bottom" constant="22" id="APQ-it-mvH"/>
                             <constraint firstItem="pxx-M1-M1V" firstAttribute="centerX" secondItem="GQK-qG-bXw" secondAttribute="centerX" id="GkM-bP-M0r"/>
                             <constraint firstItem="ixB-Gb-ZBr" firstAttribute="top" secondItem="azR-8H-ypq" secondAttribute="bottom" constant="12" symbolic="YES" id="J2o-11-DhC"/>
                             <constraint firstItem="GQK-qG-bXw" firstAttribute="top" secondItem="pxx-M1-M1V" secondAttribute="bottom" constant="21" id="NRz-97-HVf"/>
+                            <constraint firstItem="7vd-0X-XMj" firstAttribute="top" secondItem="MS2-so-3oJ" secondAttribute="bottom" constant="8" id="Oho-pc-6gn"/>
+                            <constraint firstAttribute="bottom" secondItem="7vd-0X-XMj" secondAttribute="bottom" id="ZTu-nB-yku"/>
                             <constraint firstItem="azR-8H-ypq" firstAttribute="trailing" secondItem="ixB-Gb-ZBr" secondAttribute="trailing" id="bwy-Wg-FdF"/>
                             <constraint firstItem="0zd-hK-8S8" firstAttribute="centerY" secondItem="GQK-qG-bXw" secondAttribute="centerY" id="dzz-an-vjs"/>
                             <constraint firstItem="0zd-hK-8S8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="eC8-my-gQM"/>
+                            <constraint firstItem="7vd-0X-XMj" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="eSL-k0-8XK"/>
                             <constraint firstAttribute="bottom" secondItem="MS2-so-3oJ" secondAttribute="bottom" constant="28" id="gGF-BT-mFf"/>
                             <constraint firstItem="GQK-qG-bXw" firstAttribute="leading" secondItem="0zd-hK-8S8" secondAttribute="trailing" constant="36" id="hpd-zI-7bI"/>
                             <constraint firstAttribute="trailing" secondItem="azR-8H-ypq" secondAttribute="trailing" constant="25" id="jY4-20-IQy"/>

@@ -19,10 +19,11 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let dictionary = NSBundle.mainBundle().infoDictionary!
         imgAvatar.image = NSImage(named: "defaultImage");
         holaTu.stringValue = "Hola Mundo";
         
-        //copiright.stringValue = NSBundle.mainBundle().infoDictionary
+        copyright.stringValue = dictionary["NSHumanReadableCopyright"] as! String
     }
 
     override var representedObject: AnyObject? {
