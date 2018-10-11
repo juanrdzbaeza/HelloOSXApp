@@ -35,8 +35,10 @@ class ViewController: NSViewController {
     @IBAction func saludar(sender: NSButton) {
         if (nombre.stringValue == "") {
             holaTu.stringValue = "¡Hola vergonzoso picaruelo!";
+            imgAvatar.image = NSImage(named: "picaroImage");
         }else{
-            holaTu.stringValue = "Que pasa "+nombre.stringValue+" ?";
+            holaTu.stringValue = "Que pasa "+nombre.stringValue+"?";
+            imgAvatar.image = NSImage(named: "highFive");
         }
     }
     
@@ -46,6 +48,7 @@ class ViewController: NSViewController {
             imgAvatar.image = NSImage(named: "angryIcon");
         }else{
             holaTu.stringValue = "Hasta luego salao";
+            imgAvatar.image = NSImage(named: "happyIcon");
         }
         nombre.stringValue = "";
 
