@@ -19,20 +19,20 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dictionary = NSBundle.mainBundle().infoDictionary!
+        let dictionary = Bundle.main.infoDictionary!
         imgAvatar.image = NSImage(named: "defaultImage");
         holaTu.stringValue = "Hola Mundo";
         
         copyright.stringValue = dictionary["NSHumanReadableCopyright"] as! String
     }
 
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
     }
     
-    @IBAction func saludar(sender: NSButton) {
+    @IBAction func saludar(_ sender: NSButtonCell) {
         if (nombre.stringValue == "") {
             holaTu.stringValue = "¡Hola vergonzoso picaruelo!";
             imgAvatar.image = NSImage(named: "picaroImage");
@@ -42,8 +42,8 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func retirarSaludo(sender: AnyObject) {
-        if holaTu.stringValue.containsString("vergonzoso")  {
+    @IBAction func retirarSaludo(_ sender: NSButton) {
+        if holaTu.stringValue.contains("vergonzoso")  {
             holaTu.stringValue = "Adio zaborio";
             imgAvatar.image = NSImage(named: "angryIcon");
         }else{
@@ -51,8 +51,8 @@ class ViewController: NSViewController {
             imgAvatar.image = NSImage(named: "happyIcon");
         }
         nombre.stringValue = "";
-
     }
+    
     
 
 }
